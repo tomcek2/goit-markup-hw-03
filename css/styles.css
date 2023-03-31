@@ -26,6 +26,9 @@ a {
 button {
   cursor: pointer;
 }
+h3 {
+  font-size: inherit;
+}
 body {
   font-family: var(--main-font);
   color: var(--text-primary-color);
@@ -43,8 +46,13 @@ body {
 .header {
   display: flex;
   align-items: center;
-  padding: 24px 0px 25px 0px;
+  justify-content: space-between;
   border-bottom: 1px solid #ececec;
+}
+nav {
+  display: inline-flex;
+  align-items: center;
+  padding: 24px 0px 25px 0px;
 }
 .logo {
   font-family: var(--brand-font);
@@ -65,7 +73,7 @@ body {
 }
 .nav,
 .contact-info {
-  display: flex;
+  display: inline-flex;
   gap: 46px;
   font-weight: 500;
   line-height: 1.14;
@@ -75,8 +83,8 @@ body {
   color: inherit;
 }
 .contact-info {
+  margin-left: ;
   gap: 50px;
-  margin: 0 0 0 271px;
 }
 .contact-info a {
   color: var(--text-light-color);
@@ -92,6 +100,7 @@ body {
   line-height: 1.36;
   color: var(--brand-tertiary-color);
   margin-bottom: 30px;
+  letter-spacing: 0.06em;
 }
 .buttons-main {
   font-family: var(--main-font);
@@ -109,6 +118,7 @@ body {
 .paragraphs {
   display: flex;
   gap: 30px;
+  margin-bottom: 94px;
 }
 .paragraphs h3 {
   text-transform: uppercase;
@@ -145,18 +155,26 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.foto-caption h3,
-.foto-caption p {
+.foto-caption figcaption {
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
+  padding: 30px 0;
 }
 .foto-caption h3 {
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .foto-caption p {
   color: var(--text-light-color);
 }
+.buttons-portfolio {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
 .buttons-light {
+  padding: 6px 22px;
   font-family: var(--main-font);
   font-size: 16px;
   font-weight: 500;
@@ -171,16 +189,34 @@ body {
   background-color: var(--brand-primary-color);
   color: var(--brand-tertiary-color);
 }
+.examples {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.examples figure {
+  border: 1px solid #eeeeee;
+}
+.description {
+  padding: 20px 24px;
+}
+
 .description > h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 .description > p {
   font-size: 16px;
   line-height: 1.87;
   color: var(--text-light-color);
+}
+footer {
+  padding: 60px 0;
 }
 footer,
 .background-secondary {
@@ -195,6 +231,12 @@ footer,
 }
 .address a {
   opacity: 0.6;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 9px;
 }
 .highlight:hover,
 .highlight:focus {
